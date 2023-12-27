@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "portal": {
+    "test": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/portal",
+            "outputPath": "dist/test",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -30,19 +30,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/sass/styles.scss",
-              "./node_modules/primeng/resources/primeng.min.css",
-              "./node_modules/primeicons/primeicons.css",
-              {
-                "input":"src/sass/theme-lara-blue-light.scss",
-                "bundleName": "lara-light-blue",
-                "inject": false
-              },
-              {
-                "input":"src/sass/theme-lara-blue-dark.scss",
-                "bundleName": "lara-dark-blue",
-                "inject": false
-              }
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -77,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "portal:build:production"
+              "browserTarget": "test:build:production"
             },
             "development": {
-              "browserTarget": "portal:build:development"
+              "browserTarget": "test:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -88,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "portal:build"
+            "browserTarget": "test:build"
           }
         },
         "test": {
@@ -105,15 +93,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/sass/styles.scss"
+              "src/styles.scss"
             ],
             "scripts": []
           }
         }
       }
     }
-  },
-  "cli": {
-    "analytics": false
   }
 }

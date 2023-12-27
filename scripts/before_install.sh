@@ -19,7 +19,7 @@
 # NODE JS
 
 # Define the expected Node.js version
-expected_version="14.17.0"
+expected_version="16.20.2"
 install_node(){
     echo ..............................installin Node whit NVM...
     export NVM_DIR=$HOME/.nvm;
