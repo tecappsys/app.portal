@@ -13,12 +13,7 @@
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
-    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "paths": {
-      "@shared/*":["src/app/shared/*"],
-      "@app/*":["src/app/*"]
-    },
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "ES2022",
@@ -27,7 +22,7 @@
     "lib": [
       "ES2022",
       "dom"
-    ],
+    ]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
