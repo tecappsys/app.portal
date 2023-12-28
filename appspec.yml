@@ -3,6 +3,11 @@ os: linux
 files:
   - source: /
     destination: /var/www/app/portal
+permissions:
+  - object: /
+    pattern: "**"
+    owner: ubuntu
+    group: ubuntu
 hooks:
   # During the BeforeInstall deployment lifecycle event, run the commands
   #   in the script specified in "location".
