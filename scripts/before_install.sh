@@ -14,8 +14,6 @@
 # echo ..............................installin curl...
 # sudo apt-get install -y curl
 
-
-
 # NODE JS
 
 # Define the expected Node.js version
