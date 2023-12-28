@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { SharedComponent } from './shared.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
-// Import PrimeNG modules
-import { ButtonModule } from 'primeng/button';
-import { CardModule } from 'primeng/card';
-
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSidenavModule} from '@angular/material/sidenav';
 @NgModule({
   declarations: [
     SharedComponent
@@ -15,17 +17,28 @@ import { CardModule } from 'primeng/card';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    CardModule,
-    ButtonModule,
-    
+    // Material UI - Modules
+    MatButtonModule,
+    MatCardModule,
+    MatIconModule,
+    MatTooltipModule,
+    MatSlideToggleModule,
+    MatToolbarModule,
+    MatSidenavModule
   ],
   exports:[   
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,    
-    CardModule,
-    ButtonModule,
-    
+    // Material UI - Modules
+    MatButtonModule,
+    MatCardModule,
+    MatIconModule,
+    MatTooltipModule,
+    MatSlideToggleModule,
+    MatToolbarModule,
+    MatSidenavModule,
+
     SharedComponent
   ]
 })

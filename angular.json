@@ -30,19 +30,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "./node_modules/primeng/resources/primeng.min.css",
-              "./node_modules/primeicons/primeicons.css",
-              {
-                "input":"src/sass/theme-lara-blue-light.scss",
-                "bundleName": "lara-light-blue",
-                "inject": true
-              },
-              {
-                "input":"src/sass/theme-lara-blue-dark.scss",
-                "bundleName": "lara-dark-blue",
-                "inject": true
-              }
+              "@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/sass/styles.scss"
             ],
             "scripts": []
           },
@@ -105,6 +94,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -112,5 +102,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
