@@ -1,4 +1,4 @@
-source /home/ec2-user/.bash_profile
+source /home/ubuntu/.bashrc
 
 echo ..............................Change directory...
 cd /var/www/app/portal
