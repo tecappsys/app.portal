@@ -16,21 +16,21 @@
 
 # NODE JS
 
-# Define the expected Node.js version
-# expected_version="16.20.2"
-# install_node(){
-#     echo ..............................installin Node whit NVM...
-#     export NVM_DIR=$HOME/.nvm;
-#     source $NVM_DIR/nvm.sh;
-#     source ~/.bashrc
-#     nvm install node -y
-#     nvm install 16.20.2
-#     nvm use 16.20.2
-#     echo ..............................Version nodejs...
-#     node -v
-#     echo ..............................Version npm...
-#     npm -v  
-# }
+Define the expected Node.js version
+expected_version="16.20.2"
+install_node(){
+    echo ..............................installin Node whit NVM...
+    export NVM_DIR=$HOME/.nvm;
+    source $NVM_DIR/nvm.sh;
+    source ~/.bashrc
+    nvm install node -y
+    nvm install 16.20.2
+    nvm use 16.20.2
+    echo ..............................Version nodejs...
+    node -v
+    echo ..............................Version npm...
+    npm -v  
+}
 
 # Check if Node.js is not installed or version differs
 # if ! command -v node &> /dev/null; then
