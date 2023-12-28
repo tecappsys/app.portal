@@ -1,3 +1,5 @@
+source /home/ec2-user/.bash_profile
+
 echo ..............................Change directory...
 cd /var/www/app/portal
 
