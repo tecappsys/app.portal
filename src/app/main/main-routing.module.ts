@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './main.component';
+import { HomeComponent } from '../components/home/home.component';
 
 const routes: Routes = [{
   path: '',
@@ -8,9 +9,15 @@ const routes: Routes = [{
   children:[
     {
       path:'',
-      redirectTo:'home',
-      pathMatch:'full'
-    }
+      pathMatch:'full',      
+      component:HomeComponent,
+      data:{
+        entity:'Portfolio',
+        title:'Angular'
+      }
+    },
+    
+    { path: '**', pathMatch: 'full', redirectTo: '' }
   ]
 }];
 

@@ -7,8 +7,13 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatDividerModule} from '@angular/material/divider';
+
 @NgModule({
   declarations: [
     SharedComponent
@@ -24,7 +29,11 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatTooltipModule,
     MatSlideToggleModule,
     MatToolbarModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatGridListModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatDividerModule
   ],
   exports:[   
     HttpClientModule,
@@ -38,6 +47,10 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatSlideToggleModule,
     MatToolbarModule,
     MatSidenavModule,
+    MatGridListModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatDividerModule,
 
     SharedComponent
   ]
