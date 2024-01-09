@@ -13,7 +13,7 @@ const routes: Routes = [{
       component:HomeComponent,
       data:{
         entity:'Portfolio',
-        title:'Angular'
+        title:'Frameworks'
       }
     },
     
