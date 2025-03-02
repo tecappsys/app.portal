@@ -12,7 +12,7 @@ export class AppService{
         imgPath:'assets/img/react_app.jpg',        
         imgLogoPath:'assets/img/react_logo_app.jpg',
         description:'Applications developed with Reactjs framework',
-        href:'https://tecappsys.com/portfolio/react/'
+        href:environment.appReact
       },
       {
         title:'Angular',
@@ -20,7 +20,7 @@ export class AppService{
         imgPath:'assets/img/angular_app.jpg',        
         imgLogoPath:'assets/img/angular_logo_app.jpg',
         description:'Applications developed with AngularJs framework',
-        href:'https://tecappsys.com/portfolio/angular/'
+        href:environment.appAngular
       }
     ]
    

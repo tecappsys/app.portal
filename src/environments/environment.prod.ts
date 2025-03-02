@@ -1,5 +1,7 @@
 export const environment = {
     production: true,
-    apiUrl: 'https://tecappsys.com/portfolio/api/node',
-    app_home: 'https://tecappsys.com',
+    apiUrl: 'https://portfolio.api.tecappsys.com/',
+    appHome: 'https://portfolio.tecappsys.com/',
+    appReact:'https://portfolio.react.tecappsys.com/',    
+    appAngular:'https://portfolio.react.tecappsys.com/'
 };
