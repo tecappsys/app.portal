@@ -1,6 +1,6 @@
-import { Component, HostBinding} from '@angular/core';
+import { Component} from '@angular/core';
 import { THEME_UI } from '../shared/enums/theme-ui.enum';
-import { LOCAL_STORAGE_KEY } from '../shared/enums/local-storage-key.enum';
+import { ThemeService } from '../core/theme.service';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -8,20 +8,10 @@ import { LOCAL_STORAGE_KEY } from '../shared/enums/local-storage-key.enum';
 })
 export class MainComponent {
 
-  @HostBinding('class') className = ''; 
-
-  public constructor(){
-    let theme = window.localStorage.getItem(LOCAL_STORAGE_KEY.THEME_UI);
-    if(theme){      
-      this.className = theme;
-    }else{
-      this.onToggleControlSwitch(false);
-    }
-  }
+  public constructor(public themeService: ThemeService){}
 
   public onToggleControlSwitch(darkMode:boolean){
-    this.className = darkMode ? THEME_UI.DARK : THEME_UI.LIGHT;
-    window.localStorage.setItem(LOCAL_STORAGE_KEY.THEME_UI,this.className);
+    this.themeService.toggleTheme(darkMode ? THEME_UI.DARK : THEME_UI.LIGHT);
   }
 
 }
