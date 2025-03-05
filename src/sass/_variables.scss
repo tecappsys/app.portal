@@ -1,0 +1,23 @@
+$media-breakpoint-xs: 0;
+$media-breakpoint-sm: 576px;
+$media-breakpoint-md: 768px;
+$media-breakpoint-lg: 992px;
+$media-breakpoint-xl: 1200px;
+$media-breakpoint-xxl: 1400px;
+
+$themes: (
+  light: (
+    background: #ffffff,
+    text: #333333,
+    primary: #007bff,
+    secondary: #6c757d,
+    transparent: transparent
+  ),
+  dark: (
+    background: #1e1e1e,
+    text: #ffffff,
+    primary: #ff5722,
+    secondary: #ff9800,
+    transparent: transparent
+  )
+);

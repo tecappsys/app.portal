@@ -1,0 +1,29 @@
+@mixin theme($theme) {
+    background-color: map-get($theme, background);
+    color: map-get($theme, text);
+  
+    a {
+        color: map-get($theme, primary);
+    }
+  
+    button {
+        background-color: map-get($theme, transparent);
+        color: map-get($theme, primary);
+        border: 1px solid map-get($theme, transparent);
+
+        &:hover {
+            background-color: darken(map-get($theme, transparent), 10%);
+        }
+
+        // SWITCH BUTTON
+        .mdc-switch__track{
+            background: map-get($theme, primary);
+        }
+        .mdc-switch__shadow{
+            background: map-get($theme, secondary);
+        }
+    }
+
+    
+  }
+  
