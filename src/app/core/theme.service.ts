@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { THEME_UI } from '../shared/enums/theme-ui.enum';
 import { LOCAL_STORAGE_KEY } from '../shared/enums/local-storage-key.enum';
 
@@ -8,6 +8,7 @@ import { LOCAL_STORAGE_KEY } from '../shared/enums/local-storage-key.enum';
 export class ThemeService {
 
   private currentTheme: THEME_UI;
+  public themeChanged: EventEmitter<THEME_UI> = new EventEmitter<THEME_UI>();
 
   public constructor() {
     this.loadTheme();
@@ -23,5 +24,6 @@ export class ThemeService {
     document.body.classList.add(newTheme);
     this.currentTheme = newTheme;
     window.localStorage.setItem(LOCAL_STORAGE_KEY.THEME_UI, newTheme); 
+    this.themeChanged.emit(newTheme);
   }
 }

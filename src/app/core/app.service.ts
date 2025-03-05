@@ -7,7 +7,7 @@ export class AppService{
 
     private apps:App[] =[
       {
-        title:'React',
+        title:'REACT FRAMEWORK',
         subtitle:'Building web applications with React',
         imgPath:'assets/img/react_app.jpg',        
         imgLogoPath:'assets/img/react_logo_app.jpg',
@@ -15,7 +15,7 @@ export class AppService{
         href:environment.appReact
       },
       {
-        title:'Angular',
+        title:'ANGULAR FRAMEWORK',
         subtitle:'Building web applications with Angular',
         imgPath:'assets/img/angular_app.jpg',        
         imgLogoPath:'assets/img/angular_logo_app.jpg',

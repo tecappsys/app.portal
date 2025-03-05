@@ -12,8 +12,8 @@ const routes: Routes = [{
       pathMatch:'full',      
       component:HomeComponent,
       data:{
-        entity:'Portfolio',
-        title:'Frameworks'
+        entity:'',
+        title:'Apps'
       }
     },
     
