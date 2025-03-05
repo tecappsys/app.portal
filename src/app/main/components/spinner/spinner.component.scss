@@ -20,6 +20,7 @@
   background-position: center;
   background-image: url("../../../../assets/img/logo-light.svg");
   opacity: 0;
+  -webkit-animation: logoAppear 0.3s ease-in-out forwards, fadeInOut 1s infinite;
   animation: logoAppear 0.3s ease-in-out forwards, fadeInOut 1s infinite;
 }
 
