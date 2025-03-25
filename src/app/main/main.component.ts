@@ -1,7 +1,5 @@
 import { Component} from '@angular/core';
-import { THEME_UI } from '../shared/enums/theme-ui.enum';
-import { ThemeService } from '../core/theme.service';
-import { LOCAL_STORAGE_KEY } from '../shared/enums/local-storage-key.enum';
+import { LOCAL_STORAGE_KEY,THEME_UI,ThemeService } from '@tecappsys/library-angular';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -19,6 +17,7 @@ export class MainComponent {
   }
 
   public onChangeIsDarkTheme(isDarkTheme:boolean){
+    this.isDarkTheme = isDarkTheme;
     this.themeService.toggleTheme(isDarkTheme ? THEME_UI.DARK : THEME_UI.LIGHT);
   }
 

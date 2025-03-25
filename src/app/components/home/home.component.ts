@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService } from '@src/app/core/app.service';
-import { SpinnerService } from '@src/app/core/spinner.service';
 import { App } from '@src/app/shared/interface/app.interface';
+import { environment } from '@src/environments/environment';
+import { SpinnerService } from '@tecappsys/library-angular';
 
 @Component({
   selector: 'app-home',
@@ -10,14 +10,30 @@ import { App } from '@src/app/shared/interface/app.interface';
 })
 export class HomeComponent implements OnInit {
   
-  public apps:App[];
+  public apps:App[] =[
+    {
+      title:'REACT FRAMEWORK',
+      subtitle:'Building web applications with React',
+      imgPath:'assets/img/react_app.jpg',        
+      imgLogoPath:'assets/img/react_logo_app.jpg',
+      description:'Applications developed with Reactjs framework',
+      href:environment.appReact
+    },
+    {
+      title:'ANGULAR FRAMEWORK',
+      subtitle:'Building web applications with Angular',
+      imgPath:'assets/img/angular_app.jpg',        
+      imgLogoPath:'assets/img/angular_logo_app.jpg',
+      description:'Applications developed with AngularJs framework',
+      href:environment.appAngular
+    }
+  ];
 
-  public constructor(private spinnerService:SpinnerService, private appService:AppService){
+  public constructor( private spinnerService:SpinnerService ){
     this.spinnerService.showSpinner();
   }
 
   public ngOnInit() {
-    this.apps = this.appService.getApps();
     this.spinnerService.hideSpinner()
   }  
 

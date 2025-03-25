@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { SharedComponent } from './shared.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
@@ -12,12 +11,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import {MatDividerModule} from '@angular/material/divider';
-
+import { MatDividerModule } from '@angular/material/divider';
+import { SharedComponents } from './shared.component';
+import { TecappsysModule } from '@tecappsys/library-angular';
 @NgModule({
-  declarations: [
-    SharedComponent
-  ],
   imports: [   
     FormsModule,
     HttpClientModule,
@@ -33,7 +30,9 @@ import {MatDividerModule} from '@angular/material/divider';
     MatGridListModule,
     MatInputModule,
     MatFormFieldModule,
-    MatDividerModule
+    MatDividerModule,
+    TecappsysModule,
+    SharedComponents
   ],
   exports:[   
     HttpClientModule,
@@ -51,8 +50,8 @@ import {MatDividerModule} from '@angular/material/divider';
     MatInputModule,
     MatFormFieldModule,
     MatDividerModule,
-
-    SharedComponent
+    TecappsysModule,
+    SharedComponents,
   ]
 })
 export class SharedModule { }

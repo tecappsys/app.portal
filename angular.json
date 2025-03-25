@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "preserveSymlinks":true,
             "outputPath": "dist/",
             "baseHref": "/",
             "index": "src/index.html",
@@ -31,8 +32,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/sass/styles.scss",              
-              "node_modules/bootstrap/scss/bootstrap.scss"
+              "node_modules/@tecappsys/library-styles/scss/styles.scss",
+              "node_modules/bootstrap/scss/bootstrap.scss",
+              "node_modules/bootstrap/dist/css/bootstrap-grid.css"
             ],
             "scripts": []
           },
@@ -55,6 +57,11 @@
                   "maximumWarning": "2kb",
                   "maximumError": "4kb"
                 }
+              ],
+              "styles": [
+                "node_modules/@tecappsys/library-styles/scss/styles.scss",
+                "node_modules/bootstrap/scss/bootstrap.scss",
+                "node_modules/bootstrap/dist/css/bootstrap-grid.css"
               ],
               "optimization": true,
               "outputHashing": "all",
